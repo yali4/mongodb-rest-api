@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "612eb096-22c4-4060-aa6e-fae57bdd70d5",
+		"name": "Spring MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"name\": \"iPhone 4\",\n\t\t\"brand\": \"Apple\",\n\t\t\"category\": \"Smart Phone\",\n\t\t\"price\": 799,\n\t\t\"currency\": \"USD\",\n\t\t\"attributes\": {\n\t\t\t\"CPU\": \"Core 2\",\n\t\t\t\"RAM\": \"512 GB RAM\",\n\t\t\t\"BATTERY\": \"1300 MaH\"\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"iPhone 5\",\n\t\t\"brand\": \"Apple\",\n\t\t\"category\": \"Smart Phone\",\n\t\t\"price\": 999,\n\t\t\"currency\": \"USD\",\n\t\t\"attributes\": {\n\t\t\t\"CPU\": \"Core 2\",\n\t\t\t\"RAM\": \"1 GB RAM\",\n\t\t\t\"BATTERY\": \"1600 MaH\"\n\t\t}\n\t},\n{\n\t\t\"name\": \"iPhone 6\",\n\t\t\"brand\": \"Apple\",\n\t\t\"category\": \"Smart Phone\",\n\t\t\"price\": 1299,\n\t\t\"currency\": \"USD\",\n\t\t\"attributes\": {\n\t\t\t\"CPU\": \"Core 2\",\n\t\t\t\"RAM\": \"2 GB RAM\",\n\t\t\t\"BATTERY\": \"1800 MaH\"\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"iPhone 7\",\n\t\t\"brand\": \"Apple\",\n\t\t\"category\": \"Smart Phone\",\n\t\t\"price\": 1499,\n\t\t\"currency\": \"USD\",\n\t\t\"attributes\": {\n\t\t\t\"CPU\": \"Core 4\",\n\t\t\t\"RAM\": \"2 GB RAM\",\n\t\t\t\"BATTERY\": \"2600 MaH\"\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"iPhone 8\",\n\t\t\"brand\": \"Apple\",\n\t\t\"category\": \"Smart Phone\",\n\t\t\"price\": 1799,\n\t\t\"currency\": \"USD\",\n\t\t\"attributes\": {\n\t\t\t\"CPU\": \"Core 4\",\n\t\t\t\"RAM\": \"4 GB RAM\",\n\t\t\t\"BATTERY\": \"2800 MaH\"\n\t\t}\n\t}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Products by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/name/iPhone",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"name",
+						"iPhone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Products by Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/price/1000-1500",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"price",
+						"1000-1500"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
